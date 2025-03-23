@@ -81,13 +81,21 @@ app.delete("/user/delete", userMiddleware, async(req , res)=>{
     await contentModel.deleteOne({
         contentId,
         //@ts-ignore
-        userId: req.userId
+         userId: req.userId
     })
     return res.json(200).json({
         message: "content deleted"
     })
 })
 
+app.post("/user/share", async(req, res)=>{
+    
+})
+
+app.get("/user/shareLink", (req, res) => 
+{
+
+})
 
 
 
